@@ -1,9 +1,19 @@
-console.log("Welcome to the Lobster Club Improv Comedy Show!");
-const btn = null;
-console.log("Button?: ", btn);
-
-function getJoke() {
-    console.log("ur mom");
+async function getJoke() {
+    const myJoke = await fetch("https://icanhazdadjoke.com/", {
+        headers: {
+            'Accept': 'application/json'
+        }
+    });
+    let joke2 = await myJoke.json();
+    let jokeText = joke2["joke"];
+    return jokeText;
 }
 
-getJoke();
+document.addEventListener("DOMContentLoaded", function() {
+    const btn = document.getElementById("my-button");
+    btn.addEventListener("click", async function() {
+       document.getElementById("my-joke").innerHTML = await getJoke();
+    })
+    
+})
+

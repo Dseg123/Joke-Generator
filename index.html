@@ -2,12 +2,20 @@
 <html>
     <head>
         <link rel="stylesheet" href="styles.css">
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
         <script src="script.js"></script>
         <title>Joke Generator</title>
     </head>
     <body>
         <!-- Split-view containers -->
-        <div class="split-box"></div>
-        <div class="split-box"></div>
+        <div class="split-box">
+            <h1> My Joke Generator </h1>
+            <p>Click the button to generate a random joke...</p> 
+            <button id="my-button" type="button" class="btn btn-primary">Make me laugh!</button> 
+        </div>
+        <div class="split-box">
+            <p id="my-joke"></p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD3S3GswGsC78MBPKVLY1NArKMG5tHGX8OQz-T0Gwxwg&s">
+        </div>
     </body>
 </html>
